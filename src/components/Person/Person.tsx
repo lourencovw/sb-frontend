@@ -5,7 +5,7 @@ import './Person.css';
 
 const Person: FC<IPerson> = ({name, address, age, phone_number,picture}) => (
   <div className="container" data-testid="Person">
-    <img className="user-avatar" src={picture} data-testid="img"/>
+    <img className="user-avatar" src={picture} alt="profile" data-testid="img"/>
 
     <div className="sub-container">
       <div className="label" data-testid="label">
