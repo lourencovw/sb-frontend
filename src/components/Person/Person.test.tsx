@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Person from './Person';
@@ -17,7 +16,13 @@ describe('<Person />', () => {
     render(<Person {...randomPerson}/>);
     
     const person = screen.getByTestId('Person');
+    const img = screen.getByTestId('img');
+    const label = screen.getByTestId('label');
+    const description = screen.getByTestId('description');
 
     expect(person).toBeInTheDocument();
+    expect(img).toHaveAttribute('src', randomPerson.picture)
+    expect(label).toHaveTextContent(`${randomPerson.name}, ${randomPerson.age}, ${randomPerson.phone_number}`)
+    expect(description).toHaveTextContent(randomPerson.address)
   });
 });
