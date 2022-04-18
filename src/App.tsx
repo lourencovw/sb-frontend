@@ -64,7 +64,7 @@ function App() {
         onInputChange={(event, newInputValue) => {
           setValue(newInputValue);
         }}
-        isOptionEqualToValue={(option, value) => option === value}
+        isOptionEqualToValue={() => true}
         getOptionLabel={(option) => option.toString()}
         options={[autocomplete.suggestion]}
         loading={autocomplete.isFetching}
