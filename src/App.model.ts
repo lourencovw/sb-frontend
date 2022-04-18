@@ -1,7 +1,6 @@
 export interface IDataPeople {
     people: IPerson[];
     isFetching: boolean;
-    message: string;
 }
 
 export interface IPerson {
